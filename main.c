@@ -52,7 +52,7 @@ int main()
    char rd[MAXREG],rs[MAXREG],rt[MAXREG];
    inf = fopen("sum.asm", "r");
 
-   //while (fgets(line, MAXLINE, stdin)) {
+   //while (fgets(line, MAXLINE, stdin)) {  // replace line below with this
    while (fgets(line, MAXLINE, inf)) {
       /* check if a 3-address R format instruction */
       if (sscanf(line, "%s $%[^,],$%[^,],$%s", oper, rd, rs, rt) == 4) {
