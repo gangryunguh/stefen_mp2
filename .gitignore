@@ -1,0 +1,14 @@
+.idea
+*~
+*.o
+*.exe
+*.bin
+\#*\#
+out.*
+cmake-build-debug
+testing
+CVS
+*.tar
+*.tgz
+*.gz
+
