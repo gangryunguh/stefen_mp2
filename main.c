@@ -17,7 +17,7 @@ typedef enum {
    NONE
 } mips_format;
 
-typedef struct template {
+typedef struct mytemplate {
    union {
       struct {
          unsigned funct: 6;
@@ -57,6 +57,7 @@ int main()
       /* check if a 3-address R format instruction */
       if (sscanf(line, "%s $%[^,],$%[^,],$%s", oper, rd, rs, rt) == 4) {
          printf("input line: %s\n", line);
+         example_encoding.format = RFORMAT;
          example_encoding.u.rformat.opcode = 0;
          example_encoding.u.rformat.rd = 16;
          example_encoding.u.rformat.rt = 0;
